@@ -8,9 +8,12 @@ use App\Http\Controllers\Controller;
 //Use User模型
 use App\User;
 use Response;
+use App\Http\Resources\UserResource;
+use App\Http\Controllers\Api\Traits\TraitsFormatData;
 
 class UserController extends Controller
 {
+    use TraitsFormatData;
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +23,14 @@ class UserController extends Controller
     {
         //
         //dump(User::all());
-        return Response::json(['code'=>200,'msg'=>'success','data'=>User::all()]);
+        //返回查询结果
+        //return Response::json(['code'=>200,'msg'=>'success','data'=>User::all()]);
+
+        //经过user资源过滤字段
+        //return Response::json(['code'=>200,'msg'=>'success','data'=>UserResource::collection(User::all())]);
+
+        // 运用Traits
+        return $this->TransFormat(200,'success',UserResource::collection(User::all()));
     }
 
     /**
@@ -53,6 +63,7 @@ class UserController extends Controller
     public function show($id)
     {
         //
+        return Response::json(['code'=>200,'msg'=>'success','data'=>User::find($id)]);
     }
 
     /**
