@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Api\V1;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+//Use User模型
+use App\User;
+use Response;
+
 class UserController extends Controller
 {
     /**
@@ -15,7 +19,8 @@ class UserController extends Controller
     public function index()
     {
         //
-        return 'index api';
+        //dump(User::all());
+        return Response::json(['code'=>200,'msg'=>'success','data'=>User::all()]);
     }
 
     /**
