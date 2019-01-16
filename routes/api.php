@@ -28,3 +28,22 @@ Route::group(['prefix'=>'v1','namespace'=>'Api\V1'],function(){
     Route::post('logout','AuthController@logout');
     Route::post('user','AuthController@user');
 });
+
+$api = app('Dingo\Api\Routing\Router');
+
+//https://localhost/api/test
+$api->version('v1', function ($api) {
+    $api->get('test',function(){
+        return 'this is dingo api !';
+    });
+});
+
+//https://localhost/api/test2
+//header
+//  Accept = application/prs.myapp.v2+json
+// 跨版本访问
+$api->version('v2', function ($api) {
+    $api->get('test2',function(){
+        return 'this is dingo api test2!';
+    });
+});
