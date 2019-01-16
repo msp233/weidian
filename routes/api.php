@@ -18,7 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //分组
-Route::group(['prefix'=>'v1','namespace'=>'Api\V1'],function(){
+/*Route::group(['prefix'=>'v1','namespace'=>'Api\V1'],function(){
     Route::resource('user','UserController');
     Route::resource('user/{create}','UserController');
+});*/
+Route::group(['prefix'=>'v1','namespace'=>'Api\V1'],function(){
+    Route::post('login','AuthController@login');
+    Route::post('refresh','AuthController@refresh');
+    Route::post('logout','AuthController@logout');
+    Route::post('user','AuthController@user');
 });
