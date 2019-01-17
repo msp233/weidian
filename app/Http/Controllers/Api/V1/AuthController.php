@@ -7,16 +7,21 @@ use App\Http\Controllers\Controller;
 
 use App\Http\Controllers\Api\Traits\TraitsFormatData;
 
+use Dingo\Api\Routing\Helpers;
+
 class AuthController extends Controller
 {
     use TraitsFormatData;
+    use Helpers;
     //用户登录，获取jwt
     public function login(Request $request){
         $data = $request->only('email','password');
         if(!($token = auth('api')->attempt($data))){
-            return $this->TransFormat(40000,'email or password error ','登录错误');
+            //return $this->TransFormat(40000,'email or password error ','登录错误');
+            return $this->response->error('登录错误',521);
         }else{
-            return $this->TransFormat(10000,'login success',['token' => $token] );
+            //return $this->TransFormat(10000,'login success',['token' => $token] );
+            return $this->response->array($this->transFormat(10000,'login success!',['token'=>$token]));
         }
     }
     //重置令牌 刷新jwt

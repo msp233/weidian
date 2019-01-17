@@ -228,5 +228,12 @@ return [
         ],
 
     ],
+    'errorFormat' => [
+        'message' => ':message',
+        'errors' => ':errors',//错误代码号
+        'code' => ':code', //错误状态码
+        'status_code' => ':status_code', //状态号
+        'debug' => ':debug',
+    ],
 
 ];

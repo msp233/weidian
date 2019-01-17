@@ -26,16 +26,25 @@ Route::group(['prefix'=>'v1','namespace'=>'Api\V1'],function(){
     Route::post('login','AuthController@login');
     Route::post('refresh','AuthController@refresh');
     Route::post('logout','AuthController@logout');
-    Route::post('user','AuthController@user');
+    Route::get('user','AuthController@user')->middleware('auth:api');
 });
 
 $api = app('Dingo\Api\Routing\Router');
 
 //https://localhost/api/test
-$api->version('v1', function ($api) {
+/*$api->version('v1', function ($api) {
     $api->get('test',function(){
         return 'this is dingo api !';
     });
+});*/
+$api->version('v1', [
+    'namespace' => 'App\Http\Controllers\Api\V1',
+    'middleware' => ['bindings'],
+], function ($api) {
+    $api->post('login','AuthController@login');
+    $api->post('refresh','AuthController@refresh');
+    $api->post('logout','AuthController@logout');
+    $api->post('user','AuthController@user');
 });
 
 //https://localhost/api/test2
