@@ -1,0 +1,138 @@
+header {
+    height: 3.1rem;
+    background-color: #e92c54;
+    background-image: -webkit-linear-gradient(top, #e9667d, #ef3353);
+    background-image: linear-gradient(top, #e9667d, #ef3353);
+    padding-top: 0.546875rem;
+    box-sizing: border-box;
+}
+
+header p {
+    color: white;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.amount {
+    font-size: 0.40625rem;
+}
+
+.total {
+    font-size: 0.84375rem;
+}
+
+.wealth-list {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+
+.wealth-list li {
+    -webkit-flex-grow:1;
+    flex-grow:1;
+    background-color: white;
+    text-align: center;
+}
+
+.wealth-list li:nth-of-type(2) {
+    margin: 0 1px;
+}
+
+.wealth-list li span {
+    display: block;
+    width:100%;
+}
+.wealth-list li span:nth-of-type(1) {
+    font-size: 0.3125rem;
+    color: #7a7a7a;
+    margin: 0.46875rem 0 0.234375rem 0;
+}
+.wealth-list li span:nth-of-type(2) {
+    font-size: 0.65625rem;
+    color: #1f282e;
+    margin: 0.234375rem 0 0.46875rem 0;
+   
+}
+
+.main-box {
+    margin-top: 0.15625rem;
+}
+
+.main-box li {
+    position: relative;
+    height: 2.031rem;
+    padding: 0.3125rem;
+    background-color: white;
+    box-sizing: border-box;
+}
+.main-box li .pic,
+.main-box li .pic-1 {
+    position: absolute;
+    width: 0.7rem;
+    top:0.67rem;
+    left:0.4rem;
+}
+.main-box li .pic {
+    height: 0.6rem;
+    background-image: url("../images/001.png");
+    background-size: 100% 100%;
+}
+.main-box li .pic-1 {
+    top:0.6rem;
+    height: 0.68rem;
+    background-image: url("../images/002.png");
+    background-size: 100% 100%;
+}
+
+.main-box li .part {
+    position: relative;
+    top:0;
+    left:1.1rem;
+    width: 87%;
+    height: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 1.4rem;
+    font-size: 0.4rem;
+    box-sizing: border-box;
+}
+.main-box li .part .text {
+    font-size: .4rem;
+    color:black;
+}
+
+.main-box li .part .box-1 {
+    float:right;
+    color: #929697;
+    margin-right: .5rem;
+}
+
+.main-box li .part .icon-arrow {
+    position: absolute;
+    top: .5rem;
+    right: 0;
+    width: 0.22rem;
+    height: 0.4075rem;
+    background-image: url("../images/sanjiao.png");
+    background-size: 100% 100%;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+    padding: 0.15625rem 0.28125rem 0.46875rem;
+    box-sizing: border-box;
+}
+
+footer a {
+    display: block;
+    width: 100%;
+    height: 1.3125rem;
+    line-height: 1.3rem;
+    color: white;
+    background-color: #e92c54;
+    text-align: center;
+    font-size: 0.53125rem;
+    border-radius: 0.067rem;
+}

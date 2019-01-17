@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!--↑↑模板中请务必使用HTML5的标准head结构↑↑-->
+  <meta name="author" content="shopex UED Team" />
+  <link rel="icon" href="https://wd.hnmall.com/app/topwap/statics/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://wd.hnmall.com/app/topwap/statics/favicon.ico" type="image/x-icon" />
+
+
+  <title>测试环境，请勿进行真实业务行为_友阿微店</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link type='image/x-icon' href='/images/a2/12/48/d180da5fd7665600b83ad0ec74a64272f42377e0.png' rel='apple-touch-icon-precomposed'>
+
+
+  <link href="css/shopex.picker.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/shopex.picker.min.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/shopex.poppicker.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/style.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/widgets.css" rel="stylesheet" media="screen, projection" />
+  <script src="js/zepto.js"></script>
+  <script src="js/shopex.js"></script>
+  <script src="js/shopex.picker.js"></script>
+  <script src="js/shopex.poppicker.js"></script>
+  <script src="js/shopex.zoom.js"></script>
+  <script src="js/shopex.previewimage.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/validate.js"></script>
+  <style>
+    .shopex-row.shopex-fullscreen>[class*="shopex-col-"] {
+height: 100%;
+  }
+  .shopex-col-xs-3,
+  .shopex-control-content {
+overflow-y: auto;
+height: 100%;
+  }
+  .shopex-segmented-control .shopex-control-item {
+line-height: 3rem;
+width: 100%;
+  }
+  .shopex-segmented-control.shopex-segmented-control-inverted .shopex-control-item.shopex-active {
+background-color: #fff;
+  }
+</style>
+</head>
+
+<body>
+  <header class="home-header ya-header">
+
+    <div class="main">
+      <form action="https://wd.hnmall.com/wap/item-list.html" method="post" id="goods_search">
+        <div class="shopex-input-row header-search-form">
+          <i class="bbc-icon bbc-icon-search"></i>
+          <input type="search" name="search_keywords" class="header-search shopex-input-clear" placeholder="请输入搜索商品">
+        </div>
+      </form>
+    </div>
+
+  </header>
+  <section class="container shopex-row shopex-fullscreen category-nav has-footer">
+    <div class="shopex-col-xs-3">
+      <div id="segmentedControls" class="shopex-segmented-control shopex-segmented-control-inverted shopex-segmented-control-vertical">
+        <a class="shopex-control-item" href="#content1">友阿果园</a>
+        <a class="shopex-control-item" href="#content15">食品生鲜</a>
+        <a class="shopex-control-item" href="#content57">个护化妆</a>
+        <a class="shopex-control-item" href="#content169">潮流女装</a>
+        <a class="shopex-control-item" href="#content398">品牌男装</a>
+        <a class="shopex-control-item" href="#content490">内衣配饰</a>
+        <a class="shopex-control-item" href="#content362">鞋靴箱包</a>
+        <a class="shopex-control-item" href="#content299">运动户外</a>
+        <a class="shopex-control-item" href="#content263">家用电器</a>
+        <a class="shopex-control-item" href="#content150">手机数码</a>
+        <a class="shopex-control-item" href="#content182">母婴玩具</a>
+        <a class="shopex-control-item" href="#content106">家居家纺</a>
+        <a class="shopex-control-item" href="#content88">健康养生</a>
+        <a class="shopex-control-item" href="#content1120">旅游度假</a>
+        <a class="shopex-control-item" href="#content1223">团购专享</a>
+      </div>
+    </div>
+    <div id="segmentedControlContents" class="shopex-col-xs-9 category-nav-content">
+      <div id="content1" class="shopex-control-content shopex-active">
+        <div class="category-nav-group">
+          <div class="category-nav-header">国产水果</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/0e622ab6f0f46e5d5073c10c4877aa56cac86dd0.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">苹果</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/84253aabe43d9c77a78f34eba85ed1e9e76b3f62.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">猕猴桃</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/91e6c7a7867a14cfc07f39fca95e453dda08181f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">梨</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/a400a3f29dba5281f6924c5c4e8ee179481b3b5b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">橘</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/f1b1e9368134da9a9390b46215277a06932b9b40.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">橙</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/00c1de8b486f9627a774cee654d2566da5c195cd.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">菠萝</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524892947.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">芒果</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/c7ac0bf26cb6251ecb334ef8faebc8cd97a4664d.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">荔枝</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1f19fa28f5e3a8114088f908ef68a9dacfb6bf81.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">桃</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/79d5c9573c5862c2edf8b5310c764a50eb357daa.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">西州蜜瓜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/a8867a56cbf89d3b7579f915d0403b5e68555133.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">柠檬</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">进口水果</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">泰国龙眼</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/f15753be2f54cf58f3a8086d414ecf58a2fabdb2.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">牛油果</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">泰国山竹</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/496e8dc2a8427de896ff6fd89069469a373ded17.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">红心火龙果</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content15" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">时蔬蛋肉</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ebd9693d67f6210a74f3a118216957bd4d341e42.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">禽肉/蛋</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/6109ade679975626996c41576e7c7b8008fbe179.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">精选肉类</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/059c458f280fb01baa371d1981c7dc61cd55856c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">海鲜水产</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/a164612a8af0aac8081cb05e2b3e6ff30133021f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">时蔬</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">腊味干货</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/f7d9c247847e361b8d143f1ba5d01bcbc5308bf1.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">熟食腊味</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7e09061e65e216852e0516b8e8ccba9684a9390f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">精选干货</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">粮油调味</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/6781253c3cfc75246b135938f3d6fda59ab31020.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">食用油</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2a212c1994f8c8322c4b0cfbf87d62b98a830d90.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">棕情粽礼</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7b49a70cc7d9f6811c107d22d7901fc67c409626.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">调味品</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893113.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">米/杂粮</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e8d56d54beef967d36055a92013853a2217cbd04.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">面条/面粉</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">休闲食品</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/5696808f3bc2ca0757ca54aa058cdf24c03e20de.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">坚果</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/cf808ce1355e4d423aec4e470002acea26df79a8.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">其他零食</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/80846975eb323f68036f2bb0608f36dc6185fb42.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">饼干</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/c671f866a2df689bd5c47f1d2e24d5b124b0ba7e.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">蛋糕</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e087ee51b07dd710de11f5f68912584dc1f4f962.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">蜜饯</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2baa5382b83305ea991ee8a88f38bb1b141a0218.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">糖果</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">乳品冲饮</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/9a2cd6f2d5ba052ce3e15822c3f8a42d33a12aec.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">牛奶</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7231d2352fddd529d88b7439600161e0d7c0c83b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">其他冲饮</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/bfc1f30e27f8f7c88397f40c555d540316e8a0c0.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">酸奶</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/5c5cefeaab61c74677e78a994467032cb677fba3.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">麦片</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">茗茶</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/8e7cf5099b0059dd52255124a6e7a948271ddc09.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">黑茶</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/85c9cbeca32744936d12cd425f40bcc7d50a74e7.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">其他茶</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/0443649648ab73bbf97619af159a618fb0e88955.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">龙井</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524de5440ebcf7fda519986c3caaaeb12e4d596.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">绿茶</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/a0771d0473520f50556993b3c8994b92341cf260.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">普洱茶</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">花茶</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/f3f5967d1e92bacf7f737fefddd2a62a37b5737d.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">红茶</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">名酒</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/69a69eb24af0e72451256aaf05ca0ca950e8e9dd.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">白酒</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/6e555ffd96f5af59b1fbbe77610874c9240855f9.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">杨梅酒</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893275.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">啤酒</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e1e9945ad74319a86992976cffb97e3069d53b9b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">红酒</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content57" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">面部护肤</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893516.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">BB霜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/21405f6ef1a31ae85f2ae47ae9225f6e6dc93b55.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">隔离霜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/03ddedf5f1baa1585dd971b0ed2d33cd9c7a9809.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">卸妆</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/5ba411aa3d1deb3f74edd33ee3759c1d93eea782.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">洁面</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b7799ef9ff84dea83e5a0a56b797dbdbf91a1a7a.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">爽肤水</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/54ed03c233382c20d9df4b7b24e6453764caa6ec.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">乳液面霜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893538.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">精华</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ae02d3353313fcdacb56484907459cf9451dcace.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">眼霜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/deab6b8647275e65339ccfa17acbd49816ffddd3.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">防晒</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893553.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">面膜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/970497af5137821d18ee7ae8155931eefdaec48f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">套装</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">身体护理</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/75ce8e0f1a9585006724119434c5cc551372413f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">沐浴</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/f8e46abf64f642b782b0ab48e7e14c34edf64aa6.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">润肤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/d2c30c41cd2e87f1ef534f32ff65dc4e29a91a9e.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">精油</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/03bd5e05bdb062d5d07b66e7280cd895380cded1.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">手足</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">口腔护理</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/85ceebfff99d96a7e47c3de8eba301e1571758e6.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">牙膏/牙粉</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2163bd8c4ce377c466655201150ee88a60a3c1bc.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">牙刷/牙线</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">香水彩妆</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893591.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">底妆</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893308.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">眉笔</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e1f55cc75ca1c08aabadbdc88e201f77441a1788.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">睫毛膏</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893327.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">眼线</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893344.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">眼影</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/77adbd6fdbe506a4e14589f13f1f20f7606f11a4.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">唇部</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893363.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">腮红</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/6af574605e0e66165ae12b4d64226ff861940014.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">美妆工具</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">洗发护发</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ab652b3a308c76c9f5296fce795daecefe063177.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">洗发</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/f2d8b85bcb29041928592b127f1c8382549c0c50.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">护发</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b34d3e959ab83dbf1e6da880626dc687b9343752.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">染发</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/3a1e4e7bf508cc182134ea91eb4e885e10a21c9a.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">造型</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/cea5f9eb9f03aeef9eacb3fd2616ace2d48b2474.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">套装</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">女性护理</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/c3cfbfc70ba1938bbd671fe6918f1aeb42e188b8.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">卫生巾</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ef32f6922b6de99ae95accbd88fe559f308404fc.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">脱毛膏</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">清洁用品</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/8a49dbc329bfa3c19da90c6e97672d1c3ea49d3e.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">纸品湿巾</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/8a417e1c67a0a9189b610fbc9207c9b3b852c115.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">衣物清洁</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/8a9ccdd4ec77c1d4ed5678935c8ea26f2e749c9a.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">清洁工具</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e366be70e1313478a26337648920d9361ee64325.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">家庭清洁</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content169" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">上装</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/4046a716f8af68933985ba1369950a63fbcc454b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">T恤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">短外套</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/8f4b7840f9ddca28e7d017cf8171c792bd9d2c2a.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">风衣</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e59ee8d2f44cdd50f4b70a377672f8b0f54475be.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">打底衫</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b954dac0d932c8f1039918ed22f919df0c6bc807.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">羊绒衫</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">下装</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/dca20153c53819cd202aebca79ae0d97e0c0c867.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">九分裤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ac4c7c439353a0ed2d94912d6cc4b9c18673d078.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">打底裤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7a308b55b7bfb07f9199dc24071d813fc404b517.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">高腰裤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/bb3902b4aebff23a02f38371fff3133ed7891b4f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">阔腿裤</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content398" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">上装</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7efa58a420505ed1f84d65dac1fb256ee175c413.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">背心</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">衬衫</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">T恤</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">下装</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">休闲裤</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content490" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">内衣</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/4ffd696d0a4b1a3683d4dac6c112f90f5a9f0184.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">女家居服</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2de429ae7e755c65f5b760f8b766060e94dccf77.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">男家居服</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1626baa2d3759dc30e0ab822081ab305cdbd7811.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">吊带背心</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/888aa3811b6bf302c2e24b5c739d57faa47fa98c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">秋衣秋裤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7fddf064bf473fa91d3a12946d56b1f019df3513.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">保暖内衣</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/246df9954f19195cd1cda36d7f0efb55ae2aac48.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">打底裤袜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/cc9a36af3c511f42529fab501c0efa83c6d6faa3.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">男士内裤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7b1def4a34134dd9c70540bdc3fa239abbf2657b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">女士内裤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/36f50bce8699a24329107b896208bc34e158b04c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">文胸</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/338744ee4912477a0e7051d12c65fb3ed8994b58.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">男袜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/6e9ef8b9da266fa84cd98b10ee7e29556c8f8ebf.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">女袜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">丝袜</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">服饰配件</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">帽子</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/60c92ae345ffe98325caed8097fea5bfa2191ef0.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">首饰</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/329c790afe55a3d2a1dc0044b27f174808df1e07.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">防晒袖套</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/64ab077c15db1980b53ea190107010d72a258d81.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">围巾</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e82fa58a90cbb188e4858b959831aa3be4c5d265.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">丝巾</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/825e668af24c9e6a1cc2b37f583f584394827792.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">手套</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/243857c2cc7f8fa3eef9aee1b8aa17d28bcba410.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">口罩</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/05cf8572e036ab9793c2128627457ef20b34d080.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">遮阳伞/雨伞</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content362" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">流行男鞋</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/4657d565e423e61f96fd4789b7817074e8315521.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">拖鞋</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">时尚女鞋</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893642.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">拖鞋</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">精品男包</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/4000bbe7627bf45d244f17f72ca0898effcb5d4c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">单肩包</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/3a1e673824b60d36a93744c0351416705e9a4892.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">双肩包</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">潮流女包</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/85af0c44b8d9b060c25628ceb4777518e7e7e9d8.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">双肩包</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">功能箱包</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/96bed82283304261c357410da2a242b4be8607fb.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">拉杆箱</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b06806378069915c60ee2ff8770002fa9bc8b847.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">双肩电脑包</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/af468424c5f61037a8c65be3095bb274bfa7d479.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">手提电脑包</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/568a757b2e910c84df1d48a02dd7a37846034bdc.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">旅行包</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e6a6184b1629fedd208f3cdb909a4a8cc66648c4.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">双肩包</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/323080834e5510cc29ae1dc4d1132a67b1749985.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">幼儿书包</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/4522d7b3fc4a7ef2797db9cda7cf008a34d1e5fc.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">学生书包</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content299" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">运动鞋包</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/5382ef9a7a57a57569e61f67892aae8f4502e6e9.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">拖鞋</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">运动服饰</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/af4ffbb9a577e4ccf7c440cc1d2754bcd0e8735c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">T恤</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">户外装备</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/21830972cb58564a04517f3112d7de89a712cd60.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">睡袋/吊床</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/95729ef019218dea9dcdb02f7ac487c3b827221b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">户外工具</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content263" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">大家电</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/bc566effa0e2ae1d277cd0c819a3f4af70faf937.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">空调</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/def0dc1a0c88013f4449b736a23bf4e1742318e6.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">热水器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/3a65ee654f273f398390f418003718d20e9140d0.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">燃气灶</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">厨房电器</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/656fe5e91ead8d9514515ed948d664b0c03e9c15.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">其他</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/c1c6abc5ac8dce8c6d950ea8edd1ab626a10b752.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">料理机</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/d88178062e80181bedc23f4bcc4096e00c2cf4a6.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">净水器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/928940d23c70d02f7ac045a2b6fecfafa9a5bf4b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">豆浆机</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/24594e544d1257782e09d9ecdad757b41f7bcbd4.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">榨汁机/咖啡机</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/22f3bd4bf4d6a74f9a4972a02e61fb1663f52d80.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">电饭煲</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/fcc78e059cf83abab005d30e217cfeb122ccfdf7.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">电压力锅/电烤箱/空气炸锅</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/77005c17afa4ec35e2de1579cf1c21eab4b76e8e.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">电磁炉</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/72cfca96bb202adcc7c53123a8792332fc8ecc86.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">电水壶/热水瓶</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">生活电器</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893699.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">净化器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/17e61106d986c441690bd35e77f85bad4441e5a5.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">台灯</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/bb792d927f1142041e476f8e0fa5433f8bcfc9cc.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">数据线</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ba043f95337452bb82fe36b926323cc1ee2ad25f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">除湿机</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/16884d62683db7c3d302c8920d880c7d92008b1b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">扫地机器人</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2c5859b00d663a9b90779dbc698277b9ee157be9.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">酸奶机</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/42a585da22431b25405042092750b2bf065f56de.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">焖烧杯</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/028ef65d4a754d89d9ddcf897ae7e6d637fb176c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">灭蚊灯</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/d9b686998ddb7752cde2c973022edb3c7b17aab1.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">其他</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7f0b599be4e0bebfb15f20a1e7745c4077c70532.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">取暖电器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/18d1bcb181311e96f3b361cdf23ef5a2d15c8f9f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">擦窗宝</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893720.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">电风扇</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1f771ad668bb25db170887137b61467a8f32db14.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">挂烫机/熨斗</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/5d2c70ea78711670e6600798182385d297976966.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">吸尘器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/9902faa96eed82344c0a2393ebd4d2fa48a99891.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">插座</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893744.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">加湿器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/53f994e8b5b37aa5fc89de94d730defc0ff1e9b9.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">干衣机</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">个护健康</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b2bf13d7bc1071dcca2cf98ba65546a723770031.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">护颈仪</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/3a6e62e8b09b060087c377d17e55ddc1f24d1e30.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">剃须刀</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2460fe40ee36064593f79e476b1eeff01dcf3531.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">剃/脱毛器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/6e0e592e1e09e50f78925687fdacdbf5937d0ba3.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">电吹风</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e88dee0cb91c675bc620650934691776b11b5a80.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">美容器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/cdc7d662677e1c15e4bf14b2c2032aa6d8d3c027.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">理发器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ab0d8d21659e776ba4b4381f19d75a43b82c6aa4.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">按摩器</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content150" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">手机通讯</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/9e0b8208c3320b2314ce8fb19a78a4e422372f39.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">手机</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/24e9b09a33f3769d06e94a9e476da5799f828576.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">手机配件</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">数码影音</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/dee610166dbb950de98d98235cf41c12be83c52d.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">音响/音箱</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2fbfa1c3f649cac412634ac263f095641054f354.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">数码配件</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/329645a680516cd533d11c421b633dd7b44f71a5.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">智能设备</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content182" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">奶粉</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/14fe46f6caee4c3fc0182d40993135dc6b8e20ce.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">婴幼奶粉</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">营养辅食</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/07c0f273f8e908c33a7a420dcad572ba2bae99dd.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">钙铁锌/维生素</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">尿裤湿巾</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/dbe1ec901903b90af7b7b4b3d660fd9b4ead2ed0.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">纸尿裤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/dbf95fced16fe65a9c5d6690ffebcd04ada94653.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">纸尿片</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">湿巾</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">喂养用品</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/19f1ffc7fafbbb06e65510fea1d29629bddfd60a.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">奶瓶奶嘴</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/80e480ab20079bf9e84e58d450ab94a79160213e.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">吸奶器</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/fa05394dd090d82e531f7feca1b9c6cfd76ad235.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">暖奶消毒</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/eb9dfe6914a6e0da8cb5d74596a19759fa525572.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">牙胶安抚</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/cd5ba9f47e6b85a6cc1bee46a995fc555a8901d0.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">儿童餐具</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/acca4fedde61c5b7251e1399eefa29d4fd41d8e2.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">壶/水杯</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">洗护用品</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/93c29224c37ff4317203c1c23021f48cc01ea9e6.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">洗手液</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/97b5bc2ba514654f34515ac390e28ed3edf3889d.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">洗发沐浴</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/c16a02cf034f8b03fa271559980a352e4f1db154.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">洗衣液/皂</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/dacdaf63fbcda1f9eebacf43015b6c5a3f8d0f79.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">驱蚊防晒</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">理发器</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">车床座椅</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893779.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">婴儿推车</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">寝居服饰</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ab353bea1ccf01af47653821a506478824f2da76.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">婴儿服</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2d68b63836a65f23f49cd34a89271e6d02c983f4.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">婴儿鞋帽袜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b3551b8d43efa03a2e656aeffee2bdc1b0565fd7.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">家居床品</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/c884ad55729b6364684e4ff2e077d24338f48b7a.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">睡袋/抱被</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/0917d9fbdce0495b4841ceca23719af279f073d1.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">爬行垫</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">妈妈专区</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/004ff620295af727b7996a4bb40e9dbd0c52e00d.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">妈咪包/背婴带</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/80ad7a837b90e187ab7a62c964fbad1e4d780b71.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">文胸/内裤</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/caeeeaa08570b209d2389215fbae024255ed81c1.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">孕妈装</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2534c1b113e842ce368106f34faa3418e8034479.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">待产护理</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/630db593b0e4c19328ee1ea917af35659b087be0.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">防溢乳垫</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">童装童鞋</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/6250ee0fed6436e5917fe13a8270970853162e58.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">童袜</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/c0238e6e1421b14f963816fef5cf784d3c322b18.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">内衣</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ccab1a0c84351be8dfba9dbbe4d82ad927916421.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">家居服</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e2f01e2e569b55e27b4ab66e3bc555b1f38c8f8c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">书包</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">玩具</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/1524893805.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">益智玩具</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content106" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">生活日用</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e1d724917ffb667563f68cc16804408cd6977e22.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">其它</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b6555674032bd6ce5b1893445c2ecb2ce699a678.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">收纳用品</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">雨具雨伞</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e0fdda0b7e057e224cb935bc3f260670d80ed1a9.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">清洁工具</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/a13fdbec9e982c559356d772c6ff79a00982836c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">保温杯/玻璃杯</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">厨房用具</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/a9a99e5215005f50a85f481b7987bcc35decd318.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">锅具</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ac9c2de2f01b4778afc44b449ac658303c57bac9.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">灶具</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/2ae4ce3373a607e0e2da4cfa37e37f8cd0cf6d94.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">餐具</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7f2f9c13e9c457565da67b1011174c343c772f7f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">杯具</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/e80f8eaa31fda51dbd9507d11a42e30e5bc4827e.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">刀具/菜板</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/454342e85edcc80aa3b327b8d3e729e6ea7a9896.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">配件</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">家纺</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/4264597f4a46e285ee83a1e87b8012f5326d55dd.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">套件</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/f2f0b88363053afc5e9ab8d5da8105eb90ad87be.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">毛巾</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7d85244431e7c569c62fb1708d583d7bb29f003c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">被子</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/a5e39fd0dfc77ef8608ec4b3f037d8720afeaba7.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">枕头</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/5e84ec4299b0ed6970c2eddcdacf310cafb3df19.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">浴巾</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b8f1c5fe49b2833650e6fb2573c7a2dc9cd0d5ff.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">床垫/床褥</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7af4e8811fd507211a1a5cafe6dedba9aed52a9b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">床单/床笠</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b6d7bfc83b4b47119dc09fc077b60116077f0c2c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">毯子</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">抱枕靠垫</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/828d2745d039a35ec90370017c8b159bc470d277.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">凉席</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content88" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">滋补保健</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/96ed6b64ccf04aa583d12fc5e3949366868e139b.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">桂圆干</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/32dc748a4ccd3fa414964fda483b1a2b8a6ea045.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">阿胶</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/0ff4d33fdb251a8dce415cfe4b7d9c962f3ab7ca.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">蜂蜜/蜂产品</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/7c34061e18b8b3bd79c38c68a682450188103b93.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">人参/西洋参</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/20959b8c00dde247eef6ef43c316bde6774a4f09.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">枸杞</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/10ff053f73ceb42056adcea5baa1a24bcd341f5a.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">养生茶饮</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/8d267b437d7b7a0e196d18d40dd0defb66736d9c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">红枣</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/799efcaf63796475fcd84f08cf7a80e6e55a4e8f.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">保健药品</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/ff0d56abe5b016b777bd679d620245d577f408d5.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">礼盒装</span></a>
+          </div>
+        </div>
+        <div class="category-nav-group">
+          <div class="category-nav-header">保健器具</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/07aa3fdc89445e17d2df4e07ff4ab14325be544c.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">足浴</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/683d4d0464ea3bd3073ef101459389259322dcf5.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">计生用品</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/b4c420503c843935d13539c4df0fa83f587ecc31.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">电子烟</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/53dd18bec6c1c5a98d0632cc1f52e9f9364c3897.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">烟油</span></a>
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/83137ef8ef21cbca0ada69d26086550ec075ece6.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">足浴盆</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content1120" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">旅游产品</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src="picture/c95e0f80c6cc644144c5167585dbb3bdb9103039.png"><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">旅游产品</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content1223" class="shopex-control-content ">
+        <div class="category-nav-group">
+          <div class="category-nav-header">团购专享</div>
+          <div class="category-nav-list">
+            <a class="category-nav-item" href="item-list.html"><img style="width:62px;height:62px;" src=""><span style="display: block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">端午团购专享</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    shopex.init({
+      swipeBack: true //启用右滑关闭功能
+    });
+    var controls = document.getElementById("segmentedControls");
+    var contents = document.getElementById("segmentedControlContents");
+
+    controls.querySelector('.shopex-control-item').classList.add('shopex-active');
+    contents.querySelector('.shopex-control-content').classList.add('shopex-active');
+  </script>
+  <footer class="navigation">
+    <ul class="nav-group">
+      <li><a href="https://wd.hnmall.com/wap"><i class="bbc-icon bbc-icon-home-empty"></i><span>首页</span></a></li>
+      <li class="active"><a href="https://wd.hnmall.com/wap/category.html"><i class="bbc-icon bbc-icon-category"></i><span>分类</span></a></li>
+      <li><a href="https://wd.hnmall.com/wap/cart.html"><i class="bbc-icon bbc-icon-cart-empty"></i><span>购物车</span></a></li>
+      <li><a href="https://wd.hnmall.com/weidian/store-index.html"><i class="bbc-icon bbc-icon-store-empty"></i><span>店铺</span></a></li>
+      <li><a href="https://wd.hnmall.com/wap/member.html"><i class="bbc-icon bbc-icon-user-empty"></i><span>会员</span></a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+.withdrawal-info {
+    font-size: 0.4375rem;
+    color: #262626;
+    text-align: center;
+    padding-bottom: 0.5625rem;
+}
+.withdrawal-info img {
+    display: block;
+    width: 2.125rem;
+    margin: 0.5625rem auto 0.390625rem;
+}
+.withdrawal-info .money {
+    color: #e21742;
+    padding-top: 0.25rem;
+    font-size: 0.625rem !important;
+    position: relative;
+    margin-left: -30px;
+}
+.withdrawal-info .money span {
+    font-size: 0.875rem;
+}
+.withdrawal-name {
+    background-color: #fff;
+}
+.withdrawal-name li {
+    position: relative;
+    padding-left: 0.3125rem;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: left;
+    color: #000;
+    font-size: 0.375rem;
+    clear: both;
+    height: 1.71875rem;
+    line-height: 1.71875rem;
+}
+.withdrawal-name li label {
+    display: inline-block;
+    float: left;
+    height: 1.71875rem;
+    width: 1.975rem;
+}
+.withdrawal-name li input {
+    display: inline-block;
+    float: left;
+    width: 7rem;
+    height: 1.71875rem;
+    border: 0;
+}
+.withdrawal-rmb {
+    padding: 0.3125rem;
+}
+.withdrawal-rmb li {
+    display: block;
+    float: left;
+    width: 2.109375rem;
+    height: 1.03125rem;
+    line-height: 1.03125rem;
+    background-color: #fff;
+    color: #2a343e;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 0.28125rem;
+    font-size: 0.375rem;
+}
+.withdrawal-rmb li:nth-child(4n) {
+    margin-right: 0;
+}
+.withdrawal-rmb li.active {
+    color: #fff;
+    background-color: #e21742;
+}
+.withdrawal-bot {
+    position: fixed;
+    bottom: 0px;
+    width: 10rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0.15625rem 0 0.46875rem;
+    background: #f5f5f5;
+}
+.withdrawal-bot p {
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 0.34375rem;
+    clear: both;
+    margin-bottom: 0.3125rem;
+}
+.btn-save {
+    color: #fff;
+    display: block;
+    background-color: #e92c54;
+    text-align: center;
+    bottom: 0.01rem;
+    height: 1.3125rem;
+    font-size: 0.53125rem;
+    width: 96%;
+    margin: 0 auto;
+    border-radius: 0.15625rem;
+    border: none;
+}

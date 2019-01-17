@@ -1,0 +1,77 @@
+.newslist-nav {
+    display: block;
+    height: 1.34375rem;
+    line-height: 1.34375rem;
+    background: #fff;
+    font-size: 0.46875rem;
+    border-bottom: 1px solid #f5f5f5;
+    position: relative;
+    color: #181e23;
+    padding-left: 0.75rem;
+}
+.newslist-nav i {
+    position: absolute;
+    right: 0.390625rem;
+    top: 50%;
+    margin-top: -0.125rem;
+    width: 0.4375rem;
+    height: 0.25rem;
+    vertical-align: middle;
+    background: url(../images/pages/046.png) no-repeat;
+    background-size: 6.25rem 9.375rem;
+}
+.newslist-nav i.open {
+    background-position: -3.671875rem 0;
+}
+.newslist-nav i.close {
+    background-position: -3.671875rem -0.25rem;
+}
+.newslist-subnav {
+    display: none;
+    background: #fafafa;
+}
+
+.newslist li.active .newslist-subnav{
+    display: block;
+}
+
+.newslist-subnav li {
+    position: relative;
+    overflow: hidden;
+    min-height: 2.22rem;
+    border-bottom: 1px solid #e6e6e6;
+    padding-left: 2.59375rem;
+    padding-right: 0.390625rem;
+}
+.newslist-subnav li .img {
+    width: 1.718755rem;
+    height: 1.71875rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.46875rem;
+}
+.newslist-subnav li .infos .name {
+    font-size: 0.4375rem;
+    padding-top: 0.4375rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #181e23;
+}
+.newslist-subnav li .infos .date {
+    padding-top: 0.390625rem;
+    color: #6d6d6d;
+    overflow: hidden;
+    font-size: 0.34375rem;
+}
+.newslist-subnav li .infos .date .star {
+    width: 0.390625rem;
+    height: 0.390625rem;
+    margin-right: 0.078125rem;
+    display: inline-block;
+    background: url(../images/pages/bright.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}

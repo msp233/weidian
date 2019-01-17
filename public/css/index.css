@@ -1,0 +1,236 @@
+.container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 1.35rem;
+  overflow-x: hidden;
+}
+header {
+  position: relative;
+}
+.swiper-wrapper,
+.swiper-slide {
+  height: auto;
+}
+.swiper-slide img {
+  width: 100%;
+}
+.search-box {
+  position: absolute;
+  width: 100%;
+  padding: 0.3125rem;
+  top: 0;
+  z-index: 9;
+  box-sizing: border-box;
+}
+.search-box button {
+  position: absolute;
+  height: 0.5625rem;
+  width: 0.5625rem;
+  display: inline-block;
+  left: 6%;
+  bottom: 32%;
+  border: none;
+  background: url("../images/pages/022.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.search-box input {
+  width: 100%;
+  height: 0.82rem;
+  padding-left: 0.8rem;
+  font-size: 0.375rem;
+  border: none;
+  color: #000;
+  text-indent: 0.4rem;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 0.8rem;
+}
+nav {
+  position: relative;
+  width: 100%;
+  height: 1.171875rem;
+  box-sizing: border-box;
+  background-color: white;
+}
+nav .nav-list {
+  position: relative;
+  float: left;
+  width: 8.75rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+nav .nav-list .swiper-slide {
+  float: left;
+  min-width: 1.75rem;
+  line-height: 1.171875rem;
+  text-align: center;
+}
+nav .nav-list .swiper-slide span {
+  color: #929697;
+  font-size: 0.34375rem;
+  pointer-events: none;
+}
+nav .nav-list .swiper-slide .active {
+  color: #e21742;
+  padding: 0.15rem;
+  border-bottom: 2px solid #e21742;
+}
+nav .arrow {
+  float: right;
+  width: 1.25rem;
+  height: 100%;
+  background: #fff;
+  border-left: 2px solid #eee;
+  box-sizing: border-box;
+}
+nav .arrow span {
+  display: block;
+  width: 0.28125rem;
+  height: 0.28125rem;
+  border-left: 1px solid #818586;
+  border-bottom: 1px solid #818586;
+  pointer-events: none;
+  margin: 0.4rem auto;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+nav .arrow.active span {
+  margin: 0.5rem auto;
+  -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+.guid-box {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 1.171875rem;
+  left: 0;
+  z-index: 10;
+  background-color: #fbfbfb;
+  -webkit-animation: fadeIn 0.1s linear both;
+          animation: fadeIn 0.1s linear both;
+}
+.guid-box > span {
+  float: left;
+  display: block;
+  width: 2.5rem;
+  line-height: 0.78125rem;
+  color: #000;
+  font-size: 0.375rem;
+  text-align: center;
+  border-right: 1px solid #f1edec;
+  border-bottom: 1px solid #f1edec;
+  padding: 0.3125rem 0;
+  box-sizing: border-box;
+}
+.active-box {
+  margin-top: 0.2rem;
+  margin-bottom: 0.15rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  font-size: 0.5rem;
+  text-align: center;
+  color: #ef3353;
+  background-color: #fff;
+  word-break: break-all;
+}
+.active-box span {
+  padding: 0 0.5rem;
+}
+.goods-list {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.goods-list li {
+  position: relative;
+  float: left;
+  width: 4.921rem;
+  margin-bottom: 0.15rem;
+  padding-bottom: 0.3rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+.goods-list li a {
+  display: block;
+  width: 100%;
+  color: #4d4c4c;
+  overflow: hidden;
+}
+.goods-list li a span {
+  display: inline-block;
+  width: 100%;
+  height: 4.03125rem;
+}
+
+.lazy {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.goods-list li a b {
+  display: inline-block;
+  font-size: 0.375rem;
+  color: #f66;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0 0.1rem;
+  padding-right: 0.2rem;
+}
+.goods-list li a em {
+  display: inline-block;
+  font-size: 0.3125rem;
+  color: #929697;
+  font-style: normal;
+  text-decoration: line-through;
+}
+.goods-list li a i {
+  float: right;
+  width: 1.09375rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  margin: 0.1rem 0.1rem 0 auto;
+  background-color: #ef3353;
+  border-radius: 0.09375rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.25rem;
+  font-style: normal;
+  box-sizing: border-box;
+}
+.goods-list li:nth-of-type(2n+1) {
+  margin-right: 0.15rem;
+}
+.goods-list li p {
+  color: #1f282e;
+  padding: 0 0.1rem;
+  font-size: 0.375rem;
+  overflow: hidden;
+  height: 1rem;
+  line-height: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.more-link {
+  display: block;
+  width: 2.96875rem;
+  height: 0.625rem;
+  line-height: 0.625rem;
+  margin: 0.25rem auto;
+  text-align: center;
+  color: #929697;
+  font-size: 0.375rem;
+  border-radius: 15px;
+}
+
+.recommend-list {
+  margin-top: .2rem;
+  background-color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.recommend-list li {
+  margin: .1rem;
+  overflow: hidden;
+}

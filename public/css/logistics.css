@@ -1,0 +1,118 @@
+.logistics-tit {
+    text-align:center;
+    padding:0.3125rem;
+    font-size:0.6rem;
+    position:relative;
+    font-weight:bold;
+}
+.logistics-tit a {
+    padding:0.3125rem;
+    position:absolute;
+    display:block;
+    top:0;
+    left:0;
+}
+.logistics-tit a img {
+    width:0.7rem;
+    height:auto;
+}
+.logistics-name {
+    padding: 0.6rem;
+    position: relative;
+    height: 1.55rem;
+    border-top: 1px solid #d9d9d9;
+    background: #2a4963;
+}
+.logistics-name .pic {
+    position: absolute;
+    width: 1.55rem;
+    height: 1.55rem;
+    background: #fff;
+}
+.logistics-name .pic img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.logistics-name .infos {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2.1rem;
+    color: #fff;
+}
+.logistics-name .infos h3 {
+    font-size: .50625rem;
+    padding-top: .13rem;
+    margin: 0;
+    font-weight: normal;
+}
+.logistics-name .infos p {
+    font-size: .40625rem;
+    padding-top: .25rem;
+}
+.logistics-main {
+    background: #fff;
+    padding: 0 0.40625rem .1rem 0.40625rem;
+    margin-top: .2rem;
+}
+.logistics-main h3 {
+    margin: 0;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.4375rem;
+    font-weight: normal;
+    border-bottom: 1px dashed #c9c9c9;
+}
+.logistics-main li {
+    position: relative;
+    padding: .3rem 0;
+    border-top: 1px solid #e8e8e8;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 0.625rem;
+    color: #a0a0a0;
+}
+.logistics-main li span {
+    font-size: .4375rem;
+    line-height: .55rem;
+}
+.logistics-main li span em {
+    font-size: .33rem;
+    font-style: normal;
+}
+.logistics-main li:before {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background: #c9c9c9;
+    display: block;
+    content: "";
+    z-index: 10;
+    left: -0.5rem;
+    top: 50%;
+}
+.logistics-main li:last-child:before {
+    height: 0;
+}
+.logistics-main li:after {
+    width: .2rem;
+    height: .2rem;
+    position: absolute;
+    background: #c9c9c9;
+    display: block;
+    content: "";
+    z-index: 10;
+    left: -0.59rem;
+    top: 40%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+}
+.logistics-main li:first-child {
+    border-top: none;
+    color: #000;
+}
+.logistics-main li:first-child:after {
+    background: #000;
+}

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!--↑↑模板中请务必使用HTML5的标准head结构↑↑-->
+  <meta name="author" content="shopex UED Team" />
+  <link rel="icon" href="https://wd.hnmall.com/app/topwap/statics/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://wd.hnmall.com/app/topwap/statics/favicon.ico" type="image/x-icon" />
+
+
+  <title>测试环境，请勿进行真实业务行为_友阿微店</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link type='image/x-icon' href='/images/a2/12/48/d180da5fd7665600b83ad0ec74a64272f42377e0.png' rel='apple-touch-icon-precomposed'>
+
+
+  <link href="css/shopex.picker.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/shopex.picker.min.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/shopex.poppicker.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/style.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/widgets.css" rel="stylesheet" media="screen, projection" />
+  <script src="js/zepto.js"></script>
+  <script src="js/shopex.js"></script>
+  <script src="js/shopex.picker.js"></script>
+  <script src="js/shopex.poppicker.js"></script>
+  <script src="js/shopex.zoom.js"></script>
+  <script src="js/shopex.previewimage.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/validate.js"></script>
+</head>
+
+<body>
+  <style>
+    .inhide .search-shop {
+        -webkit-transform: translateY(-11rem);
+    }
+
+    .inhide .top-position {
+        -webkit-transform: translateY(0);
+    }
+    .search-shop {
+        height: 11rem;
+        margin: .5rem;
+        padding: .5rem;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        -webkit-transform: translateY(0);
+        -webkit-transition: all 0.5s ease;
+    }
+
+    .search-shop .search-shop-info {
+        display: -webkit-box;
+    }
+
+    .search-shop .search-shop-logo {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        width: 12%;
+        background: #fff;
+    }
+
+    .search-shop .search-shop-logo:after {
+        display: block;
+        content: "";
+        padding-top: 100%;
+    }
+
+    .search-shop .search-shop-logo img {
+        display: block;
+        width: 100%;
+    }
+
+    .search-shop .search-shop-name {
+        -webkit-box-flex: 1;
+        padding-left: .5rem;
+        padding-top: .4rem;
+    }
+
+    .search-shop .search-shop-name a {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+        font-size: .9rem;
+        max-width: 90%;
+    }
+
+    .search-shop .search-shop-img {
+        height: 7.5rem;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
+    .search-shop .search-shop-img img {
+        width: 100%;
+        /*max-height: 100%;*/
+    }
+
+    .top-position {
+        -webkit-transform: translateY(12rem);
+        -webkit-transition: all 0.5s ease;
+    }
+    /*自提图标*/
+    .shoppick-tip {
+    	 position: absolute;
+        top: 0;
+        left: 0;
+        width: 2.4rem;
+        height: 3.2rem;
+        color: #fff;
+    		background: url(images/selfpick.png) no-repeat;
+    		background-size:100% ;
+    }
+
+    .link-buy {
+        float: right;
+        padding: 2px 10px;
+        border-radius: 4px;
+        border: 1px solid #ff0031;
+        color: #ff0031;
+        font-size: 12px;
+    }
+
+    .shopex-inner-wrap .container {
+        padding-top: 0;
+    }
+    .bbc-pullrefresh-top {
+        top: 6rem;
+    }
+  </style>
+  <script src="js/public.js"></script>
+  <div id="offCanvasWrapper" class="shopex-off-canvas-wrap shopex-draggable shopex-slide-in">
+    <!--菜单部分-->
+    <aside id="offCanvasSide" class="shopex-off-canvas-right filters">
+      <div id="offCanvasSideScroll" class="shopex-scroll-wrapper">
+        <div class="section-white section-container filters-header">
+          <div class="filters-op reset-filters-options">重置</div>
+          <div class="section-init">筛选</div>
+          <div id="offCanvasHide" class="filters-op">确定</div>
+        </div>
+        <div class="shopex-scroll">
+          <div class="filters-options shopex-content-padded clearfix">
+            <span data-name="sf" data-value="1" class="">自营</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="shopex-inner-wrap">
+      <section class="container">
+        <div class="shopex-bar shopex-bar-nav-n">
+          <header class="home-header">
+            <i class="icon-func bbc-icon bbc-icon-back shopex-action-back"></i>
+            <div class="main">
+              <form action="https://wd.hnmall.com/wap/item-list.html" method="post" id="goods_search">
+                <div class="shopex-input-row header-search-form">
+                  <input type="search" name="search_keywords" class="header-search shopex-input-clear" value="" placeholder="寻找感兴趣的商品">
+                </div>
+              </form>
+            </div>
+            <a id="offCanvasBtn" href="#offCanvasSide" class="txt-func">
+              筛选
+            </a>
+          </header>
+        </div>
+        <div class="section-white goods-filters ">
+          <div class="goods-filters-item active" data-order="">
+            综合
+          </div>
+          <div class="goods-filters-item" data-order="sold_quantity">
+            销量
+          </div>
+          <div class="goods-filters-item" data-order="price">
+            价格
+            <i class="goods-filters-order order-asc"></i></div>
+          <div class="goods-filters-item" data-order="modified_time">
+            最新
+          </div>
+          <div id="show_style" class="goods-show-style"><i class="bbc-icon bbc-icon-thumb"></i></div>
+        </div>
+        <div id="offCanvasContentScroll" class="shopex-content shopex-scroll-wrapper bbc-pullrefresh-top ">
+          <div class="shopex-scroll">
+            <ul class="shopex-table-view pro-list-grid goods-list">
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=10836&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/1777638521985852309.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      远大车载空气净化器FC3 蜂窝进风面 50片风叶 120转每秒 46mm轻薄设计 H13级过滤网 消除雾霾 PM2.5有效过滤率99% 包邮 </h1>
+                    <div class="price">
+                      <div class="amount">￥390.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥390.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有0人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=10836" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=11621&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/3751467471022113347.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      【限湖南省内购买】松下 (Panasonic)大1匹壁挂式定频冷暖空调挂机家用 包邮 </h1>
+                    <div class="price">
+                      <div class="amount">￥2999.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥3168.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有2人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=11621" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=11625&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/2863026722721512103.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      【限湖南省内购买】松下 (Panasonic) 大1.5匹 二级能效 家用挂壁式定频 冷暖空调挂机 包邮 </h1>
+                    <div class="price">
+                      <div class="amount">￥3298.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥3468.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有0人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=11625" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=11627&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/8711569148149770711.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      【限湖南省内购买】松下（Panasonic）大1匹变频冷暖壁挂式空调挂机 包邮 </h1>
+                    <div class="price">
+                      <div class="amount">￥3458.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥3700.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有0人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=11627" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=11631&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/5683399385080776083.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      【限湖南省内购买】松下(Panasonic）大1匹变频冷暖壁挂式空调 包邮 </h1>
+                    <div class="price">
+                      <div class="amount">￥4198.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥4498.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有1人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=11631" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=11632&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/1524575256495918047.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      【限湖南省内购买】松下Panasonic大1.5匹变频冷暖空调挂机 包邮 </h1>
+                    <div class="price">
+                      <div class="amount">￥4598.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥4898.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有0人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=11632" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=11633&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/2557503252103927765.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      【限湖南省内购买】松下（Panasonic）大3匹冷暖变频立式空调柜机 包邮 </h1>
+                    <div class="price">
+                      <div class="amount">￥8298.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥8680.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有0人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=11633" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=11634&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/5416789984737501761.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      【限湖南省内购买】松下（Panasonic）立式空调柜机变频冷暖尊逸系列 大3匹 包邮 </h1>
+                    <div class="price">
+                      <div class="amount">￥11298.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥12798.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有0人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=11634" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=11419&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/626319702037440276.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      远大空气净化器家用净化机TB240 全效净化 0.4度电节能低耗 静电除尘灭菌 消除雾霾甲醇 缺氧监测 三层过滤 最佳使 </h1>
+                    <div class="price">
+                      <div class="amount">￥4180.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥4499.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有0人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=11419" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+              <li data-link="https://wd.hnmall.com/wap/item-detail.html?item_id=11425&shop_id=1">
+                <div class="thumbnail">
+                  <div class="thumb-img">
+                    <a href="#">
+                      <img src="picture/6000735781571419289.jpg_m.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="caption">
+                    <h1 class="goods-title">
+
+                      远大移动肺保FB2 随身携带 消除雾霾 时刻保肺护肺 低风阻高效率 三档风量 随心调节 H13级过滤网 PM2.5有 </h1>
+                    <div class="price">
+                      <div class="amount">￥259.00 <span class="font-gray-40 font08rem">
+                          <em class="original-price action-update-mkt-price">￥328.00</em>
+                        </span>
+                      </div>
+                      <!--<div class="purchased">已有8人购买</div>-->
+                    </div>
+                    <a href="https://wd.hnmall.com/wap/item-detail.html?item_id=11425" class="link-buy">马上抢</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- off-canvas backdrop -->
+      <div class="shopex-off-canvas-backdrop"></div>
+    </div>
+  </div>
+  <script>
+    function ajaxGetShopId(itemid, oldshopid) {
+      //获取域,路径
+      var hurl = 'https://wd.hnmall.com/wap/item-detail.html';
+      hurl += '?item_id=' + itemid + '&shop_id=';
+      //获取缓存经纬度
+      var pos = $_ZYXX.getLocation();
+      var lat = pos.lat;
+      var lng = pos.lng;
+      //若没有缓存，直接跳转旧路径
+      if (typeof(lat) == 'undefined' || typeof(lng) == 'undefined') {
+        window.location.href = hurl + oldshopid;
+        return;
+      } else {
+
+        $.ajax({
+          url: '/wap/item-shop-ajax.html',
+          //data: {'item_id': itemsId, 'lat': lat, 'lng': lng},
+          data: 'item_id=' + itemid + '&lat=' + lat + '&lng=' + lng,
+          type: 'get',
+          dataType: 'json',
+          success: function(rs) {
+            if (rs.error) {
+              //成功跳转新路径
+              if (rs.shop_id) {
+                window.location.href = hurl + rs.shop_id;
+
+              } else {
+
+                window.location.href = hurl + oldshopid;
+              }
+              return;
+            } else {
+              //失败跳转旧路径
+              window.location.href = hurl + oldshopid;
+              return;
+            }
+          },
+          error: function(rs) {
+            //失败跳转旧路径
+            window.location.href = hurl + oldshopid;
+            return;
+          }
+        });
+      }
+
+
+    }
+
+    shopex.init({
+      swipeBack: false,
+    });
+    //侧滑容器父节点
+    var offCanvasWrapper = shopex('#offCanvasWrapper');
+    //主界面容器
+    var offCanvasInner = offCanvasWrapper[0].querySelector('.shopex-inner-wrap');
+    //菜单容器
+    var offCanvasSide = document.getElementById("offCanvasSide");
+    //Android暂不支持整体移动动画
+    // if (!shopex.os.android) {
+    //   document.getElementById("move-togger").classList.remove('shopex-hidden');
+    //   var spans = document.querySelectorAll('.android-only');
+    //   for (var i = 0, len = spans.length; i < len; i++) {
+    //     spans[i].style.display = "none";
+    //   }
+    // }
+    //移动效果是否为整体移动
+    var moveTogether = false;
+    //侧滑容器的class列表，增加.shopex-slide-in即可实现菜单移动、主界面不动的效果；
+    var classList = offCanvasWrapper[0].classList;
+    //变换侧滑动画移动效果；
+    shopex('.shopex-input-group').on('change', 'input', function() {
+      if (this.checked) {
+        offCanvasSide.classList.remove('shopex-transitioning');
+        offCanvasSide.setAttribute('style', '');
+        classList.remove('shopex-slide-in');
+        classList.remove('shopex-scalable');
+        switch (this.value) {
+          case 'main-move':
+            if (moveTogether) {
+              //仅主内容滑动时，侧滑菜单在off-canvas-wrap内，和主界面并列
+              offCanvasWrapper[0].insertBefore(offCanvasSide, offCanvasWrapper[0].firstElementChild);
+              moveTogether = false;
+            }
+            break;
+          case 'main-move-scalable':
+            if (moveTogether) {
+              //仅主内容滑动时，侧滑菜单在off-canvas-wrap内，和主界面并列
+              offCanvasWrapper[0].insertBefore(offCanvasSide, offCanvasWrapper[0].firstElementChild);
+            }
+            classList.add('shopex-scalable');
+            break;
+          case 'menu-move':
+            classList.add('shopex-slide-in');
+            break;
+          case 'all-move':
+            moveTogether = true;
+            //整体滑动时，侧滑菜单在inner-wrap内
+            offCanvasInner.insertBefore(offCanvasSide, offCanvasInner.firstElementChild);
+            break;
+        }
+        offCanvasWrapper.offCanvas().refresh();
+      }
+    });
+    // document.getElementById('offCanvasShow').addEventListener('tap', function() {
+    //   offCanvasWrapper.offCanvas('show');
+    // });
+    var hasnodata = false;
+    document.getElementById('offCanvasHide').addEventListener('tap', function() {
+      offCanvasWrapper.offCanvas('close');
+
+      count = 1;
+      var reqdata = activeFilter;
+      reqdata['pages'] = count;
+
+      $('.filters-options span').each(function() {
+        var checkedFiltersOptions = $(this).hasClass('checked');
+        var name = $(this).data('name');
+        if (checkedFiltersOptions) {
+          var value = $(this).data('value');
+          reqdata[name] = value;
+        } else {
+          delete reqdata[name];
+        }
+      });
+
+      getList(reqdata, function(rs) {
+        hasnodata = $('#offCanvasContentScroll').find('.nodata-wrapper').length > 0 ? true : false;
+        if (rs.indexOf('nodata-wrapper') > 0) {
+          if (!hasnodata) {
+            listwrapper.html('');
+            $('#offCanvasContentScroll').append(rs);
+          }
+        } else {
+          if (hasnodata) {
+            $('.nodata-wrapper').remove();
+          }
+          listwrapper.html(rs);
+        }
+        shopex('#offCanvasContentScroll').pullRefresh().scrollTo(0, 0);
+        shopex('#offCanvasContentScroll').pullRefresh().enablePullupToRefresh();
+      });
+    });
+
+    $('.reset-filters-options').on('tap', function() {
+      $('.filters-options span').removeClass('checked');
+    });
+
+    //主界面和侧滑菜单界面均支持区域滚动；
+    shopex('#offCanvasSideScroll').scroll();
+    //实现ios平台的侧滑关闭页面；
+    if (shopex.os.plus && shopex.os.ios) {
+      offCanvasWrapper[0].addEventListener('shown', function(e) { //菜单显示完成事件
+        plus.webview.currentWebview().setStyle({
+          'popGesture': 'none'
+        });
+      });
+      offCanvasWrapper[0].addEventListener('hidden', function(e) { //菜单关闭完成事件
+        plus.webview.currentWebview().setStyle({
+          'popGesture': 'close'
+        });
+      });
+    }
+    console.log('repeat used page')
+    var flag = localStorage.getItem('list_type');
+    flag = ''; //不缓存用户操作
+
+    //针对热销爆品单行显示
+    (function() {
+      var type = window.location.search;
+      if (type.indexOf('type=hot') !== -1) {
+        $('#show_style').find('.bbc-icon').removeClass('bbc-icon-thumb').addClass('bbc-icon-gallery');
+        $('.goods-list').addClass('pro-list-normal').removeClass('pro-list-grid');
+        shopex('#pullrefresh').pullRefresh().scrollTo(0, 0);
+        //console.log(type,'test')
+      }
+
+    })()
+
+    if (flag && flag == 'gallery') {
+      $('#show_style .bbc-icon').addClass('bbc-icon-thumb').removeClass('bbc-icon-gallery');
+      $('.goods-list').addClass('pro-list-grid').removeClass('pro-list-normal');
+    } else if (flag && flag == 'thumb') {
+      $('#show_style .bbc-icon').addClass('bbc-icon-gallery').removeClass('bbc-icon-thumb');
+      $('.goods-list').addClass('pro-list-normal').removeClass('pro-list-grid');
+    }
+
+    $('#show_style').on('tap', function() {
+      if ($(this).find('.bbc-icon').hasClass('bbc-icon-gallery')) {
+        $(this).find('.bbc-icon').removeClass('bbc-icon-gallery').addClass('bbc-icon-thumb');
+        $('.goods-list').addClass('pro-list-grid').removeClass('pro-list-normal');
+        shopex('#offCanvasContentScroll').pullRefresh().scrollTo(0, 0);
+        localStorage.setItem('list_type', 'gallery');
+      } else if ($(this).find('.bbc-icon').hasClass('bbc-icon-thumb')) {
+        $(this).find('.bbc-icon').removeClass('bbc-icon-thumb').addClass('bbc-icon-gallery');
+        $('.goods-list').addClass('pro-list-normal').removeClass('pro-list-grid');
+        shopex('#offCanvasContentScroll').pullRefresh().scrollTo(0, 0);
+        localStorage.setItem('list_type', 'thumb');
+      }
+    });
+
+    var count = 1;
+    var totalpage = "2";
+    var listwrapper = $('.goods-list');
+    var order;
+
+    $('.goods-filters-item').on('tap', function() {
+      $(this).addClass('active').siblings().removeClass('active');
+      order = $(this).data('order');
+      var filterItem = $(this).find('.goods-filters-order')
+      if (filterItem && $(this).hasClass('active') && filterItem.hasClass('order-desc')) {
+        filterItem.removeClass('order-desc').addClass('order-asc');
+        order = order ? order + ' ' + 'desc' : '';
+      } else if (filterItem && $(this).hasClass('active') && filterItem.hasClass('order-asc')) {
+        filterItem.removeClass('order-asc').addClass('order-desc');
+        order = order ? order + ' ' + 'asc' : '';
+      }
+
+      count = 1;
+      var param = {
+        'pages': count,
+        'orderBy': order
+      }
+      var reqdata = $.extend(activeFilter, param);
+      getList(reqdata, function(rs) {
+        listwrapper.html(rs);
+        shopex('#offCanvasContentScroll').pullRefresh().scrollTo(0, 0);
+        shopex('#offCanvasContentScroll').pullRefresh().enablePullupToRefresh();
+      });
+    });
+
+    $('.filters-options ').on('tap', 'span', function() {
+      $(this).toggleClass('checked');
+    })
+
+    shopex.init({
+      swipeBack: false,
+      pullRefresh: {
+        container: '#offCanvasContentScroll',
+        down: {
+          callback: pulldownRefresh
+        },
+        up: {
+          contentrefresh: '正在加载...',
+          callback: pullupRefresh
+        }
+      },
+      swipe: true,
+      dobluetap: true,
+      longtap: true
+    });
+
+    var activeFilter = JSON.parse('{"cat_id":"269"}');
+    /**
+     * 下拉刷新具体业务实现
+     */
+    function pulldownRefresh() {
+      setTimeout(function() {
+        count = 1;
+        var param = {
+          'pages': count,
+          'orderBy': order
+        }
+        var reqdata = $.extend(activeFilter, param);
+        getList(reqdata, function(rs) {
+          if (rs.indexOf('nodata-wrapper') > 0) {
+            if (!hasnodata) {
+              listwrapper.html('');
+              $('#offCanvasContentScroll').append(rs);
+            }
+          } else {
+            listwrapper.html(rs);
+          }
+          shopex('#offCanvasContentScroll').pullRefresh().endPulldownToRefresh()
+          shopex('#offCanvasContentScroll').pullRefresh().enablePullupToRefresh(); //refresh completed
+        });
+      }, 1000);
+    }
+    /**
+     * 上拉加载具体业务实现
+     */
+    function pullupRefresh() {
+      setTimeout(function() {
+        shopex('#offCanvasContentScroll').pullRefresh().endPullupToRefresh((++count > totalpage)); //参数为true代表没有更多数据了。
+        var param = {
+          'pages': count,
+          'orderBy': order
+        }
+        var reqdata = $.extend(activeFilter, param);
+        getList(reqdata, function(rs) {
+          if (rs.indexOf('nodata-wrapper') > 0) {
+            if (!hasnodata) {
+              console.log(11);
+              listwrapper.html('');
+              $('#offCanvasContentScroll').append(rs);
+            }
+          } else {
+            listwrapper.append(rs);
+          }
+        });
+      }, 1000);
+    }
+
+    function getList(param, callback) {
+      hasnodata = $('#offCanvasContentScroll').find('.nodata-wrapper').length > 0 ? true : false;
+      $.ajax({
+        url: 'https://wd.hnmall.com/wap/item-list-ajax.html',
+        type: 'get',
+        dataType: 'html',
+        data: param,
+        success: callback
+      });
+    };
+
+    $('.shopex-table-view').on('tap', 'li', function() {
+      var link = $(this).data('link');
+      location.href = link;
+    });
+
+    $("#offCanvasContentScroll").on('swipeup', function() {
+      $('.shopex-inner-wrap').addClass('inhide');
+
+    }).on('swipedown', function() {
+      $('.shopex-inner-wrap').removeClass('inhide');
+    });
+  </script>
+
+  <script src="js/jweixin-1.0.0.js"></script>
+  <script src="js/wxsdk.js"></script>
+  <script type="text/javascript">
+    //微信分享
+    $(function() {
+      var wxsdk = YA_WX_SDK({
+        type: "itemlist",
+        title: "的友阿微店",
+        desc: '的友阿微店',
+        link: "",
+        imgUrl: ""
+      });
+    }); < /body> < /
+    html >

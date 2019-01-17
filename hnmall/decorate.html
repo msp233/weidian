@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-title" content="友阿微店">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no, address=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta http-equiv="Expires" content="-1">
+    	<meta http-equiv="pragram" content="no-cache">
+    	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+		<title>友阿微店</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/dialog.css">
+		<link rel="stylesheet" href="css/decorate.css">
+		<script src="js/flexible.js"></script>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/dialog.js"></script>
+		<script src="js/decorate.js"></script>
+	</head>
+	<body>
+		<form>
+		<ul class="listform">
+			<li>
+				<label>店铺名称</label>
+				<input type="text" class="item-fr" name="name" value="店铺名称">
+			</li>
+			<li>
+				<label>会员编号</label>
+				<input type="text" class="item-fr" name="id" value="20795">
+			</li>
+			<li>
+				<label>店铺描述</label>
+				<textarea class="item-fr" name="desc" placeholder="欢迎光临我的微店"></textarea>
+			</li>
+			<li>
+				<label>手机号码</label>
+				<input type="text" value="13407001300" name="mobile" readonly class="item-fr">
+				<i class="arrow-right"></i>
+			</li>
+			<li>
+				<label>头像</label>
+				<span class="deicon"><img src="http://wx.qlogo.cn/mmopen/WAzVaXedBibTxKAIPS8C4C40WNicA5lwzkjABtn1ybunFvWfiaN1nEw8dep8Vqj7yfjFl1DLzc39af6DqNvQiay5hA/0"></span>
+                <span class="file">选择文件</span>
+                <input id="photo" class="hidefile" type="file" name="photo">
+			</li>
+			<li>
+				<label>背景</label>
+				<span class="backicon"><img src="images/else/001.png" ></span>
+                <span class="file">选择文件</span>
+                <input id="backimg" class="hidefile" type="file" name="backimg">
+			</li>
+		</ul>
+	    <input type="submit" class="btn-save" value="保存修改">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,147 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-title" content="友阿微店">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no, address=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta http-equiv="Expires" content="-1">
+    	<meta http-equiv="pragram" content="no-cache">
+    	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+		<title>友阿微店</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/numberpicker.css">
+		<link rel="stylesheet" href="css/orderconfirm.css">
+		<script src="js/flexible.js"></script>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/numberpicker.js"></script>
+		<script src="js/orderconfirm.js"></script>
+	</head>
+	<body>
+	<div id="app" class="container">
+		<div class="order-addr">
+			<h3 class="order-title"><img src="images/ya/09.png" height="24" width="24" alt="">收货信息</h3>
+			<ul class="edit-address">
+                <li>
+                    <span id="shipMobile">郭鹏飞&nbsp;&nbsp;&nbsp;&nbsp;13520218993</span>
+                </li>
+                <li>
+                    <span id="shipAddr">湖南省/长沙市/芙蓉区五一大道人瑞潇湘国际1928</span>
+                </li>
+            </ul>
+		</div>
+		<div class="order-goods">
+			<h3 class="order-title">商品信息</h3>
+			<ul>
+				<li>
+					<div class="pic">
+						<img src="http://youam.yunyiwd.com/user_res/upload/temp/201611/02/7655136872970692060_thumbnail.jpg">
+					</div>
+					<p class="name">【限量100组&nbsp;买一送一】杨记老豆秘制豆辣酱原味买210g送90g&nbsp;味道醇厚&nbsp;席卷味蕾&nbsp;口感鲜香&nbsp;美味开胃&nbsp;包邮 </p>
+					<p class="txt"></p>
+					<p class="pricebox">
+						<em class="price">￥13.9</em>
+						<span class="num">数量：<i id="buyed">1</i></span>
+					</p>
+					<div class="picker-wrap">
+						<div class="picker-text">购买数量</div>
+						<div class="number-picker">
+							<div class="decrease">-</div>
+							<div class="quantity"><input type="number" value="1" readOnly></div>
+							<div class="increase">+</div>
+						</div>	
+					</div>
+				</li>
+			</ul>
+			<div class="confirm-item">
+				<span class="name">配送方式</span>
+				<p class="txt">
+					<select>
+                    	<option price="0" deliveryprovider="express" value="1" text="快递">快递(包邮)</option>
+                    </select>
+                    <a href="javascript:;" class="arrow-down"></a>
+                </p>
+			</div>
+		</div>
+		<div class="order-confirm">
+			<div class="confirm-item">支付方式</div>
+			<div class="confirm-item">
+				<span class="name"><i class="wx"></i>微信支付</span>
+				<p class="txt">
+					<input type="radio" name="pay" checked>
+				</p>
+			</div>
+		</div>
+		<div class="order-confirm">
+			<div class="confirm-item">收货时间</div>
+			<div class="confirm-item">
+				<label for="anytime" class="name">送货时间不限</label>
+				<input id="anytime" class="txt" type="radio" name="mail" checked value="送货时间不限">
+			</div>
+			<div class="confirm-item">
+				<label  for="holiday" class="name">仅节假日送货</label>
+				<input id="holiday" class="txt" type="radio" name="mail" value="仅节假日送货">
+			</div>
+			<div class="confirm-item">
+				<label for="workday" class="name">仅工作日送货</label>
+				<input id="workday" class="txt" type="radio" name="mail" value="仅工作日送货">
+			</div>
+		</div>
+		<div class="order-confirm">
+			<div class="confirm-item">
+				<span class="name">是否开发票</span>
+				<p class="txt">
+					<span id="switch" class="offon"></span>
+				</p>
+			</div>
+			<div class="fapiao hide">
+                <p>
+                    发票类型： 增值税普通发票
+                </p>
+                <p>
+                    发票明细：
+                    <input type="radio" id="goods_detail" value="商品明细" name="invoice_detail" checked>
+                    <label for="goods_detail">商品明细</label>
+                    <input type="radio" id="office_supplies" name="invoice_detail" value="办公用品">
+                    <label for="office_supplies">办公用品</label>
+                    <input type="radio" id="food" name="invoice_detail" value="食品">
+                    <label for="food">食品</label>
+                </p>
+                <p>
+                    发票抬头：
+                    <input type="radio" id="invoice_title_personal" name="invoice_title" checked>
+                    <label for="invoice_title_personal">个人</label>
+                    <input type="radio" id="invoice_title_company" name="invoice_title">
+                    <label for="invoice_title_company">公司</label>
+                </p>
+                <div class="pdnone" style="display: none">
+                    <p>
+                        <textarea id="taxCompany" placeholder="填写单位名称"></textarea>
+                    </p>
+                </div>
+            </div>
+		</div>
+		<div class="order-confirm">
+			<div class="confirm-item">
+				<span class="name">客服电话 </span>
+				<p class="txt">
+					<b class="tel">400-848-9448</b>
+				</p>
+			</div>
+		</div>
+		<div class="order-confirm">
+			<div class="confirm-item noborder">
+				<span class="name">给卖家留言：</span>
+			</div>
+			<div class="confirm-item">
+				<textarea class="textarea"></textarea>
+			</div>
+		</div>
+	<div class="pay-sure">
+	    <span>总金额：<b>￥</b><b id="total">100</b></span>
+	    <a href="#" class="btn-bg" style="">确认</a>
+	</div>
+	</body>
+</html>

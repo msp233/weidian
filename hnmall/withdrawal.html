@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-title" content="友阿微店">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no, address=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta http-equiv="Expires" content="-1">
+    	<meta http-equiv="pragram" content="no-cache">
+    	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+		<title>友阿微店</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/withdrawal.css">
+		<link rel="stylesheet" href="css/dialog.css">
+		<script src="js/flexible.js"></script>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/dialog.js"></script>
+		<script src="js/withdrawal.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div class="withdrawal-info">
+                <img src="images/pages/021.png" >
+                <p>可提现金额</p>
+                <p class="money"><span id="max">4.36</span>元</p>
+			</div>
+			<ul class="withdrawal-name">
+	            <li>
+	                <label>微信昵称：</label>
+	                <input type="text" readonly value="飞">
+	            </li>
+	            <li>
+	                <label>提现金额</label>
+	                <input id="total" type="text" placeholder="可兑现的余额￥4.36" value="">
+	            </li>
+			</ul>
+			<ul class="withdrawal-rmb">
+				<li class="active" data-v="20">￥20</li>
+				<li data-v="50">￥50</li>
+				<li data-v="100">￥100</li>
+				<li data-v="4.36">全部</li>
+			</ul>
+			<div class="withdrawal-bot">
+		        <p>提现的金额将通过微信零钱发送到您的微信钱包中</p>
+		        <input type="button" class="btn-save" value="提交申请">
+			</div>
+		</div>
+	</body>
+</html>

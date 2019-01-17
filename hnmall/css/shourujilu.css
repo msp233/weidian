@@ -1,0 +1,57 @@
+.income-list {
+	 
+}
+
+.income-list li {
+    margin-bottom: 0.03rem;
+    background-color: #fff;
+    padding: 0.3125rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.icpic {
+    float: left;
+    width: 1.40625rem;
+    height: 1.40625rem;
+    margin-top: .2rem;
+    margin-left:.2rem;
+    overflow: hidden;
+}
+
+.money {
+	float: right;
+    width: 2.734375rem;
+	text-align: center;
+    border-left: 1px solid #ececec;
+    color: #B72721;
+    font-size: .4rem;
+    font-weight: bold;
+}
+
+.money > span {
+	display: block;
+	line-height: .6rem;
+}
+
+.middle {
+	float: left;
+	margin-left: .4rem;
+	font-size: 0.25rem;
+}
+
+.color-5 {
+	font-size: 0.3125rem;
+    line-height: 0.35rem;
+    padding-top: 0.140625rem;
+	color: #f87108;
+}
+
+.color-6 {
+	color: #56abe4;
+}
+
+.color-7 {
+	line-height: .7rem;
+	color: #929292;
+}

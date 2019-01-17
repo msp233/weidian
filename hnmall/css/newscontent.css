@@ -1,0 +1,42 @@
+.newscont-top {
+    padding: 0.625rem 0.46875rem 0.46875rem;
+    background: #fff;
+    font-size: 0.75rem;
+    line-height: 1.4em;
+    color: #181e23;
+}
+.newscont-mid {
+    padding: 0 0.46875rem 0.46875rem;
+    background: #fff;
+    color: #7a7a7a;
+    font-size: 0.488rem;
+    line-height: 1.785em;
+}
+.newscont-mid .red {
+    color: #f00;
+}
+.newscont-bot {
+    font-size: 0.5rem;
+    padding: 0.8rem 0.46875rem 0.6rem;
+}
+.newscont-bot .read {
+    color: #646464;
+    display: inline-block;
+    padding-top: 0.03125rem;
+}
+.newscont-bot .read span {
+    color: #646464;
+}
+.newscont-bot a.goods {
+    background: url(../images/pages/zan-1.png) no-repeat 0 center;
+    background-size: 0.46875rem auto;
+    color: #646464;
+    margin-left: 0.234375rem;
+    padding-left: 0.6rem;
+    padding-top: 0.03125rem;
+}
+.newscont-bot a.goods.active {
+    background: url(../images/pages/zan-2.png) no-repeat 0 center;
+    -webkit-background-size: 0.46875rem auto;
+    background-size: 0.46875rem auto;
+}

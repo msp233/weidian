@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-title" content="友阿微店">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no, address=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta http-equiv="Expires" content="-1">
+    	<meta http-equiv="pragram" content="no-cache">
+    	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+		<title>购买成功</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/success.css">
+		<script src="js/flexible.js"></script>
+	</head>
+	<body>
+		<div class="ya-container">
+			<p>长按下面二维码即可进入友阿微店</p>
+			<div class="bold">查看更多最新特价优惠商品</div>
+			<div class="qrcode">
+				<img src="images/pages/public_weixin.jpg" alt="qrcode">
+			</div>
+			<div class="result">您已购买成功</div>
+			<div class="footer"></div>
+		</div>
+		<script type="text/javascript">
+			var body = document.body||document.querySelector('body');
+			document.body.addEventListener('touchmove',function(e){
+				e.preventDefault();
+			})
+		</script>
+	</body>
+</html>

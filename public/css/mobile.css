@@ -1,0 +1,49 @@
+
+.form-box {
+    font-size: .32rem;
+    color: #36444f;
+}
+
+.form-box li {
+    width: 100%;
+    height: 1.3333rem;
+    line-height: 1.3333rem;
+    background-color: white;
+    padding: 0 .2rem;
+    margin: .2rem auto;
+}
+
+.form-box li input {
+    border:none;
+    height: 100%;
+}
+
+.code {
+    float: right;
+    display: inline-block;
+    padding: 0 .2rem;
+    background-color: #ef3353;
+    color: white;
+    height: .6666rem;
+    line-height: .666rem;
+    margin-top: .3rem;
+    margin-right: .35rem;
+    border-radius: .07rem;
+}
+
+.form-box li.submit {
+    background-color: transparent;
+}
+
+.submit button {
+    width: 90%;
+    height: 100%;
+    margin: .2rem;
+    color: white;
+    font-size: .45rem;
+    border: none;
+    outline: none;
+    border-radius: .2rem;
+    border-radius: .2rem;
+    background-color: #ef3353;
+}

@@ -1,0 +1,137 @@
+.container {
+  padding-bottom: 1.34rem;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+   height: 4rem;
+   background: url(../images/else/001.png) no-repeat;
+   background-size: cover;
+}
+
+.user-icon {
+    position: absolute;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    left: 50%;
+    top: 50%;
+    margin-left: -0.78rem;
+    margin-top: -1.4rem;
+    overflow: hidden;
+    border: .1rem solid white;
+    border-radius: 50%;
+    z-index: 9;
+}
+
+.title {
+  height: 1.34rem;
+  line-height: 1.34rem;
+  background-color: white;
+  text-align: center;
+  margin: .15rem 0;
+  font-size: .4rem;
+} 
+
+.header .text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: .4rem;
+  color: white;
+  text-align: center;
+}
+
+.header .text .ft1 {
+  font-size: .5rem;
+}
+
+.header .text .ft2 {
+  font-size: .4rem;
+  line-height: .8rem;
+}
+
+.header .text .ft2  i {
+  font-style: normal;
+  display: inline-block;
+  width: .8rem;
+}
+.goods-list {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.goods-list li {
+  position: relative;
+  float: left;
+  width: 4.921rem;
+  margin-bottom: 0.15rem;
+  padding-bottom: 0.3rem;
+  background-color:white;
+  overflow: hidden;
+}
+.goods-list li a {
+  display: block;
+  width: 100%;
+  color: #4d4c4c;
+  overflow: hidden;
+}
+.goods-list li a span {
+  display: inline-block;
+  width: 100%;
+  height: 5rem;
+  overflow: hidden;
+}
+.goods-list li a b {
+  display: inline-block;
+  font-size: 0.375rem;
+  color: #f66;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0 0.1rem;
+  padding-right: 0.2rem;
+}
+.goods-list li a em {
+  display: inline-block;
+  font-size: 0.3125rem;
+  color: #929697;
+  font-style: normal;
+  text-decoration: line-through;
+}
+.goods-list li a i {
+  float: right;
+  width: 1.09375rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  margin: 0.1rem 0.1rem 0 auto;
+  background-color: #ef3353;
+  border-radius: 0.09375rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.25rem;
+  font-style: normal;
+}
+.goods-list li:nth-of-type(2n+1) {
+  margin-right: 0.15rem;
+}
+.goods-list li p {
+  color: #1f282e;
+  padding: 0 0.1rem;
+  font-size: 0.375rem;
+  overflow: hidden;
+  height: 1rem;
+  line-height: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.more-link {
+  display: block;
+  width: 2.96875rem;
+  height: 0.625rem;
+  line-height: 0.625rem;
+  margin: 0.25rem auto;
+  text-align: center;
+  color: #929697;
+  font-size: 0.375rem;
+  border-radius: 15px;
+}

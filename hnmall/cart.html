@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!--↑↑模板中请务必使用HTML5的标准head结构↑↑-->
+  <meta name="author" content="shopex UED Team" />
+  <link rel="icon" href="https://wd.hnmall.com/app/topwap/statics/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://wd.hnmall.com/app/topwap/statics/favicon.ico" type="image/x-icon" />
+
+
+  <title>测试环境，请勿进行真实业务行为_友阿微店</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link type='image/x-icon' href='/images/a2/12/48/d180da5fd7665600b83ad0ec74a64272f42377e0.png' rel='apple-touch-icon-precomposed'>
+
+
+  <link href="css/shopex.picker.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/shopex.picker.min.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/shopex.poppicker.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/style.css" rel="stylesheet" media="screen, projection" />
+  <link href="css/widgets.css" rel="stylesheet" media="screen, projection" />
+  <script src="js/zepto.js"></script>
+  <script src="js/shopex.js"></script>
+  <script src="js/shopex.picker.js"></script>
+  <script src="js/shopex.poppicker.js"></script>
+  <script src="js/shopex.zoom.js"></script>
+  <script src="js/shopex.previewimage.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/validate.js"></script>
+</head>
+
+<body class="body-padding-big">
+  <header class="page-header">
+    <div class="header-title">购物车</div>
+    <div id="cart_edit" class="header-right txt-func"></div>
+  </header>
+  <div class="nodata-wrapper">
+    <div class="nodata-layout">
+      <div class="nodata-icon"><i class="bbc-icon bbc-icon-cart-nodata"></i></div>
+      <div class="nodata-tip">亲，您的购物车是空的～</div>
+      <div class="nodata-guide"><a class="shopex-linkto shopex-btn shopex-btn-warning" href="https://wd.hnmall.com/wap">去购物</a></div>
+    </div>
+  </div>
+  <script>
+    var flag = false;
+    var isPromotionSelect = true;
+    $('#cart_edit').on('tap', function() {
+      if ($(this).hasClass('editing')) {
+        $(this).removeClass('editing').text('编辑');
+        $('#edit_on').hide();
+        $('#edit_off').show();
+        $('.shoex-numbox-txt').hide();
+        $('.shopex-numbox').show();
+        $('.order-goods-header .more-link').show();
+        $('.cart-main').addClass('checkout-action').removeClass('del-action');
+        $('.invalid').find('input[type="hidden"]').attr('disabled', 'disabled');
+        $('.invalid').find('input[type="checkbox"]').attr('disabled', 'disabled');
+        $('.promotion-select').attr('href', '#promotion');
+        flag = true;
+        isPromotionSelect = true;
+        updateItem();
+      } else {
+        getChooseChk();
+        $(this).addClass('editing').text('完成');
+        $('#edit_on').show();
+        $('#edit_off').hide();
+        $('.shoex-numbox-txt').show();
+        $('.shopex-numbox').hide();
+        $('.order-goods-header .more-link').hide();
+        $('.cart-main').addClass('del-action').removeClass('checkout-action');
+        $('.invalid').find('input[type="hidden"]').removeAttr('disabled');
+        $('.invalid').find('input[type="checkbox"]').removeAttr('disabled');
+        $('input[type="checkbox"]').prop('checked', false);
+        $('.promotion-select').attr('href', 'javascript:void(0);');
+        isPromotionSelect = false;
+      }
+    });
+    var chooseChk = [];
+
+    function getChooseChk() {
+      chooseChk = [];
+      $('input[type="checkbox"]:checked').each(function() {
+        chooseChk.push($(this).attr('data-name'));
+      });
+    }
+
+    function setChooseChk() {
+      $('input[type="checkbox"]').prop('checked', false);
+      $('.order-goods-list input[type="hidden"]').val(0);
+      $(chooseChk).each(function(i) {
+        $('input[type="checkbox"]').each(function() {
+          if ($(this).attr('data-name') == chooseChk[i]) {
+            $(this).prop('checked', true);
+            $(this).parent().find('input[type="hidden"]').val(1);
+            return true;
+          }
+        });
+      });
+    }
+  </script>
+
+  <footer class="navigation">
+    <ul class="nav-group">
+      <li><a href="https://wd.hnmall.com/wap"><i class="bbc-icon bbc-icon-home-empty"></i><span>首页</span></a></li>
+      <li><a href="https://wd.hnmall.com/wap/category.html"><i class="bbc-icon bbc-icon-category-empty"></i><span>分类</span></a></li>
+      <li class="active"><a href="https://wd.hnmall.com/wap/cart.html"><i class="bbc-icon bbc-icon-cart"></i><span>购物车</span></a></li>
+      <li><a href="https://wd.hnmall.com/weidian/store-index.html"><i class="bbc-icon bbc-icon-store-empty"></i><span>店铺</span></a></li>
+      <li><a href="https://wd.hnmall.com/wap/member.html"><i class="bbc-icon bbc-icon-user-empty"></i><span>会员</span></a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>
