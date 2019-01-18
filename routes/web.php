@@ -32,6 +32,8 @@ Route::get('oauth',function(){
 //https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05b20198f8b779fb&redirect_uri=https://www.spalcw.com/weidian/public/index.php/oauth&response_type=code&scope=snsapi_base&state=msp#wechat_redirect
 
 //微信测试账号地址：https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index
+/*
+ * 原生写法
 //授权地址
 Route::get('wechat',function(Request $request){
     return redirect('https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6e52a80f1867ce9c&redirect_uri=https://www.spalcw.com/weidian/public/index.php/oauth&response_type=code&scope=snsapi_userinfo&state=msp#wechat_redirect');
@@ -41,10 +43,24 @@ Route::get('wechat',function(Request $request){
 Route::get('oauth',function(Request $request){
     return $request->input();
 });
+*/
+
+//EasyWechat写法
+//授权地址
+Route::get('wechat',function(Request $request){
+    $app = app('wechat.official_account');
+    return $app->oauth->scopes(['snsapi_userinfo'])->redirect();
+});
+
+//获取code
+Route::get('oauth',function(Request $request){
+    $app = app('wechat.official_account');
+    $data = $app->oauth->setRequest($request)->user();
+    dd($data);
+});
 
 //通过code换取网页授权access_token
 //https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code
-Route::get('access_token',function(){});
 
 //刷新access_token（如果需要）
 //https://api.weixin.qq.com/sns/oauth2/refresh_token?appid=APPID&grant_type=refresh_token&refresh_token=REFRESH_TOKEN
