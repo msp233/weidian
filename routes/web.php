@@ -54,10 +54,18 @@ Route::get('wechat',function(Request $request){
 
 //获取code
 Route::get('oauth',function(Request $request){
+    //easyWechat获取
     $app = app('wechat.official_account');
     $data = $app->oauth->setRequest($request)->user();
     dd($data);
 });
+
+//wechat中间件调用方式
+Route::get('user',function(){
+    dump(session());
+    $user = session('wechat.oauth_user.default');//拿到授权用户资料
+    dd($user);
+})->middleware('wechat.oauth');
 
 //通过code换取网页授权access_token
 //https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code
