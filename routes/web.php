@@ -23,14 +23,14 @@ Route::namespace('Wap')->group(function(){
     Route::get('/','IndexController')->name('index');
 });
 
-<<<<<<< HEAD
+
 Route::get('oauth',function(){
     return view('welcome');
 });
 //微信网页授权登录
 //https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect
 //https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05b20198f8b779fb&redirect_uri=https://www.spalcw.com/weidian/public/index.php/oauth&response_type=code&scope=snsapi_base&state=msp#wechat_redirect
-=======
+
 //微信测试账号地址：https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index
 //授权地址
 Route::get('wechat',function(Request $request){
@@ -78,5 +78,3 @@ Route::get('access_token',function(){});
 //https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
 //https://api.weixin.qq.com/sns/userinfo?access_token=17_sGawhqpvBUrERTtdK5vHd5uav4n5TdFxNOqfLmkNhmcXwynifHtvd37Lxu7eUd3jAvfyUM04srB7lSdf8dacbA&openid=o869U55RxGxR6bvylVM5IbE8wDkI&lang=zh_CN
 
-
->>>>>>> 3a845fed0bd6e8de29451561d498b5db7d821843

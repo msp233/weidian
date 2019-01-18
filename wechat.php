@@ -6,15 +6,7 @@ if (!isset($_GET['echostr'])) {
 }else{
     $wechatObj->valid();    //调用valid函数进行基本配置
 }
-<<<<<<< HEAD
-class wechatCallbackapiTest
-{
-    private $access_token;    //定义一个access_token，用于后续调用微信接口（此篇用不到）
-    public function __construct(){    //构造函数
-    }
-    public function valid(){    //用于基本配置的函数
-        $echoStr = $_GET["echostr"];
-=======
+
 
 class wechatCallbackapiTest
 {
@@ -26,8 +18,6 @@ class wechatCallbackapiTest
 
     public function valid(){    //用于基本配置的函数
         $echoStr = $_GET["echostr"];
-
->>>>>>> 3a845fed0bd6e8de29451561d498b5db7d821843
         if($this->checkSignature()){
             echo $echoStr;
             exit;
@@ -43,10 +33,6 @@ class wechatCallbackapiTest
         sort($tmpArr, SORT_STRING);
         $tmpStr = implode( $tmpArr );
         $tmpStr = sha1( $tmpStr );
-<<<<<<< HEAD
-=======
-
->>>>>>> 3a845fed0bd6e8de29451561d498b5db7d821843
         if( $tmpStr == $signature ){
             return true;
         }else{
