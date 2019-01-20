@@ -284,7 +284,7 @@
         <i class="bbc-icon bbc-icon-store"></i>
         <span class="atips">店铺</span>
     </a>
-    <a href="member.html">
+    <a href="{{route('wap.member.index')}}">
         <i class="bbc-icon bbc-icon-user"></i>
         <span class="atips">会员</span>
     </a>

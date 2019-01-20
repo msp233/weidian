@@ -21,7 +21,14 @@ Route::get('/', function () {
 //web首页路由
 Route::namespace('Wap')->group(function(){
     Route::get('/','IndexController')->name('index');
+
+    //微信公众号对接
+    Route::get('member/','MemberController@index')->name('wap.member.index');
+
 });
+
+//登录页面显示
+Route::get('login/','Auth\LoginController@create')->name('auth.login.create');
 
 
 Route::get('oauth',function(){
