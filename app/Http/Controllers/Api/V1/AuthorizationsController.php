@@ -42,7 +42,8 @@ class AuthorizationsController extends Controller
                 'weixin_openid' => $wechatuser->id,
             ]);
         }
-        return $this->response->array(['token'=>JWTAuth::fromUser($user)]);
+        return redirect()->route('wap.member.index');
+        //return $this->response->array(['token'=>JWTAuth::fromUser($user)]);
     }
 
 }

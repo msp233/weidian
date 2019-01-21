@@ -28,7 +28,11 @@ Route::namespace('Wap')->group(function(){
 });
 
 //登录页面显示
-Route::get('login/','Auth\LoginController@create')->name('auth.login.create');
+//Route::get('login/','Auth\LoginController@create')->name('auth.login.create');
+//\App\Http\Middleware\CheckBrowser::class
+Route::get('login/','Auth\LoginController@create')->middleware(
+    ['check.browser']
+)->name('auth.login.create');
 
 
 Route::get('oauth',function(){
