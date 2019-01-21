@@ -24,13 +24,14 @@ Route::namespace('Wap')->group(function(){
 
     //微信公众号对接
     Route::get('member/','MemberController@index')->name('wap.member.index');
+    //Route::get('member/','MemberController@index')->middleware('auth:api')->name('wap.member.index');
 
 });
 
 //登录页面显示
 //Route::get('login/','Auth\LoginController@create')->name('auth.login.create');
 //\App\Http\Middleware\CheckBrowser::class
-Route::get('login/','Auth\LoginController@create')->middleware(
+Route::get('login','Auth\LoginController@create')->middleware(
     ['check.browser']
 )->name('auth.login.create');
 
