@@ -70,8 +70,8 @@ $api->version('v2', function ($api) {
 //对接微信公众号
 $api->version('v1',[
     'namespace' => 'App\Http\Controllers\Api\V1',
-    'middleware' => ['bindings'],
+    'middleware' => ['api'],
 ],function($api){
     $api->post('authorizations','AuthorizationsController@store');
-    $api->post('social/authorizations','AuthorizationsController@socialStore');
+    $api->get('socials/authorizations','AuthorizationsController@socialStore')->middleware('wechat.oauth');
 });

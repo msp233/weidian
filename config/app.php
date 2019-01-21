@@ -224,6 +224,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'EasyWeChat' => Overtrue\LaravelWeChat\Facade::class,
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
 
     ],
 

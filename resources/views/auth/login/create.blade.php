@@ -20,19 +20,20 @@
     <link type='image/x-icon' href='/images/a2/12/48/d180da5fd7665600b83ad0ec74a64272f42377e0.png' rel='apple-touch-icon-precomposed'>
 
 
-    <link href="css/shopex.picker.css" rel="stylesheet" media="screen, projection" />
-    <link href="css/shopex.picker.min.css" rel="stylesheet" media="screen, projection" />
-    <link href="css/shopex.poppicker.css" rel="stylesheet" media="screen, projection" />
-    <link href="css/style.css" rel="stylesheet" media="screen, projection" />
-    <link href="css/widgets.css" rel="stylesheet" media="screen, projection" />
-    <script src="js/zepto.js"></script>
-    <script src="js/shopex.js"></script>
-    <script src="js/shopex.picker.js"></script>
-    <script src="js/shopex.poppicker.js"></script>
-    <script src="js/shopex.zoom.js"></script>
-    <script src="js/shopex.previewimage.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/validate.js"></script>
+    <link href="{{URL::asset('css/shopex.picker.css')}}" rel="stylesheet" media="screen, projection" />
+    <link href="{{URL::asset('css/shopex.picker.min.css')}}" rel="stylesheet" media="screen, projection" />
+    <link href="{{URL::asset('css/shopex.poppicker.css')}}" rel="stylesheet" media="screen, projection" />
+    <link href="{{URL::asset('css/style.css')}}" rel="stylesheet" media="screen, projection" />
+    <link href="{{URL::asset('css/widgets.css')}}" rel="stylesheet" media="screen, projection" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="{{URL::asset('js/zepto.js')}}"></script>
+    <script src="{{URL::asset('js/shopex.js')}}"></script>
+    <script src="{{URL::asset('js/shopex.picker.js')}}"></script>
+    <script src="{{URL::asset('js/shopex.poppicker.js')}}"></script>
+    <script src="{{URL::asset('js/shopex.zoom.js')}}"></script>
+    <script src="{{URL::asset('js/shopex.previewimage.js')}}"></script>
+    <script src="{{URL::asset('js/common.js')}}"></script>
+    <script src="{{URL::asset('js/validate.js')}}"></script>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
     <div class="header-title">会员登录</div>
 </header>
 <section class="container">
-    <form class="form-container" action="https://wd.hnmall.com/wap/passport-dologin.html" method="post" id="login_form">
+    <form class="form-container" action="{{url('api/authorizations')}}" method="post" id="login_form">
         <input type="hidden" name="next_page" value="https://wd.hnmall.com/wap">
         <input type="hidden" name="key" value="topwap_signin">
         <section class="shopex-input-group">
@@ -67,7 +68,7 @@
     <section class="font-gray-20 sns-login">
         <div class="section-title">使用其他账号</div>
         <div class="section-container">
-            <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxdbb96d20de9ed62a&redirect_uri=https%3A%2F%2Fwd.hnmall.com%2Fwap%2Ftrustlogin-bind.html%3Fflag%3Dwapweixin&response_type=code&scope=snsapi_userinfo&state=a1d058502a2dfb757319b2595cebe6b7#wechat_redirect"
+            <a href="{{url('api/socials/authorizations')}}"
                class="section-init content-center">
                 <i class="bbc-icon bbc-icon-wapweixin-member"></i><br>微信免登 </a>
         </div>
