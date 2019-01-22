@@ -27,8 +27,8 @@
     </div>
     <div class="userinfo-name">飞</div>
     <div class="userinfo-links">
-        <a href="collection.html"><img src="images/pages/collect.png"></a>
-        <a href="charity.html"><img src="images/pages/charity.png"></a>
+        <a href="collection.html"><img src="{{URL::asset('images/pages/collect.png')}}"></a>
+        <a href="charity.html"><img src="{{URL::asset('images/pages/charity.png')}}"></a>
     </div>
 </div>
 <div class="order-nav">

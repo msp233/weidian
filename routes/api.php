@@ -74,4 +74,6 @@ $api->version('v1',[
 ],function($api){
     $api->post('authorizations','AuthorizationsController@store');
     $api->get('socials/authorizations','AuthorizationsController@socialStore')->middleware('wechat.oauth');
+    //2019-1-22 对接微信公众号菜单设置
+    $api->resource('wechatmenu','WechatMenuController');
 });
